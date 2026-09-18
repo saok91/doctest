@@ -8,10 +8,14 @@ theme:
   font: false
   palette:
     - scheme: default
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: حالت تاریک
     - scheme: slate
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: حالت روشن
@@ -48,3 +52,6 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mermaid-rtl.js

@@ -10,8 +10,79 @@
 :root {
   --md-text-font: Vazirmatn;
   --md-code-font: Vazirmatn;
-  --md-primary-fg-color: #1565c0;
-  --md-accent-fg-color: #ff9800;
+
+  --brand-navy: #051061;
+  --brand-gold: #fdb913;
+  --brand-blue: #006fff;
+  --brand-blue-on-dark: #5ba8ff;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: var(--brand-navy);
+  --md-primary-fg-color--light: var(--brand-blue);
+  --md-primary-fg-color--dark: #030845;
+  --md-accent-fg-color: var(--brand-blue);
+  --md-accent-fg-color--transparent: #006fff1a;
+  --md-typeset-a-color: var(--brand-blue);
+  --table-stripe: color-mix(in srgb, var(--brand-navy) 4.5%, transparent);
+  --table-row-hover: color-mix(in srgb, var(--brand-navy) 8%, transparent);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: var(--brand-navy);
+  --md-primary-fg-color--light: var(--brand-blue);
+  --md-primary-fg-color--dark: #030845;
+  --md-accent-fg-color: var(--brand-blue-on-dark);
+  --md-accent-fg-color--transparent: #5ba8ff1a;
+  --md-typeset-a-color: var(--brand-blue-on-dark);
+  --table-stripe: color-mix(in srgb, var(--brand-blue) 10%, transparent);
+  --table-row-hover: color-mix(in srgb, var(--brand-blue) 16%, transparent);
+}
+
+.md-header {
+  border-bottom: 3px solid var(--brand-gold);
+}
+
+.md-footer {
+  border-top: 3px solid var(--brand-gold);
+}
+
+::selection {
+  background: color-mix(in srgb, var(--brand-gold) 42%, transparent);
+}
+
+.md-search-result mark {
+  background-color: color-mix(in srgb, var(--brand-gold) 48%, transparent);
+  color: inherit;
+  box-shadow: none;
+}
+
+.md-typeset .md-typeset__scrollwrap {
+  text-align: center;
+}
+
+.md-typeset table:not([class]) {
+  border-radius: 0.75rem;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--brand-navy);
+  color: #fff;
+}
+
+.md-typeset table:not([class]) tbody tr:nth-child(even) {
+  background-color: var(--table-stripe);
+}
+
+.md-typeset table:not([class]) tbody tr:hover {
+  background-color: var(--table-row-hover);
+}
+
+.md-typeset table:not([class]) td:not([align]),
+.md-typeset table:not([class]) th:not([align]),
+[dir="rtl"] .md-typeset table:not([class]) td:not([align]),
+[dir="rtl"] .md-typeset table:not([class]) th:not([align]) {
+  text-align: center;
 }
 
 .md-typeset {
@@ -31,7 +102,7 @@
 }
 
 .md-typeset table {
-  text-align: start;
+  text-align: center;
 }
 
 .md-typeset pre,
@@ -42,7 +113,8 @@
 
 .md-typeset pre.mermaid,
 .md-typeset .mermaid {
-  direction: ltr;
+  direction: rtl;
+  unicode-bidi: isolate;
   text-align: center;
 }
 
