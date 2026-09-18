@@ -1,0 +1,54 @@
+@font-face {
+  font-family: Vazirmatn;
+  src: url("fonts/Vazirmatn-Variable.woff2") format("woff2-variations"),
+       url("fonts/Vazirmatn-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --md-text-font: Vazirmatn;
+  --md-code-font: Vazirmatn;
+  --md-primary-fg-color: #1565c0;
+  --md-accent-fg-color: #ff9800;
+}
+
+.md-typeset {
+  line-height: 1.9;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-weight: 700;
+  text-align: start;
+}
+
+.md-typeset table {
+  text-align: start;
+}
+
+.md-typeset pre,
+.md-typeset code {
+  direction: ltr;
+  text-align: left;
+}
+
+.md-typeset pre.mermaid,
+.md-typeset .mermaid {
+  direction: ltr;
+  text-align: center;
+}
+
+.md-typeset .mermaid > svg,
+.md-typeset pre.mermaid > svg {
+  display: inline-block;
+  max-width: 100%;
+  margin-inline: auto;
+}

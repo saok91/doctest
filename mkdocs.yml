@@ -1,0 +1,44 @@
+site_name: مستندات سازمان
+site_description: سایت مستندات نمونه با MkDocs Material
+site_url: !ENV [SITE_URL, "http://127.0.0.1:8000/"]
+
+theme:
+  name: material
+  language: fa
+  font: false
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: حالت تاریک
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: حالت روشن
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+  - awesome-pages
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - toc:
+      permalink: true
+
+extra_css:
+  - stylesheets/extra.css
