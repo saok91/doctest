@@ -52,3 +52,12 @@
   max-width: 100%;
   margin-inline: auto;
 }
+
+.md-typeset ol,
+.md-typeset :is(ol, ul) ol {
+  list-style-type: persian;
+}
+
+.md-typeset ol > li::marker {
+  font-family: Vazirmatn, sans-serif;
+}
