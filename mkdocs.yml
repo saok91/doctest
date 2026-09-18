@@ -27,6 +27,9 @@ plugins:
   - search
   - awesome-pages
 
+hooks:
+  - hooks/breakless_lists.py
+
 markdown_extensions:
   - admonition
   - attr_list
